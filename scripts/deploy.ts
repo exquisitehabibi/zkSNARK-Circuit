@@ -15,7 +15,7 @@ interface ICallData {
 
 const BASE_PATH = "./circuits/PolygonCircuit/";
 
-function p256(n: any): BigNumber {
+function p256(n: any): BigNumber {   // Converts a number to a 256-bit hexadecimal representation and returns it as a BigNumber
   let nstr = n.toString(16);
   while (nstr.length < 64) nstr = "0" + nstr;
   nstr = `0x${nstr}`;
@@ -23,10 +23,10 @@ function p256(n: any): BigNumber {
 }
 
 async function generateCallData(): Promise<ICallData> {
-  let zkProof = await generateProof();
+  let zkProof = await generateProof();  // Calls generateProof to get the zk-SNARK proof
 
-  const proof = unstringifyBigInts(zkProof.proof);
-  const pub = unstringifyBigInts(zkProof.publicSignals);
+  const proof = unstringifyBigInts(zkProof.proof);        // Converts proof and 
+  const pub = unstringifyBigInts(zkProof.publicSignals);  // public signals to BigNumber format
 
   let inputs = "";
   for (let i = 0; i < pub.length; i++) {
@@ -39,7 +39,7 @@ async function generateCallData(): Promise<ICallData> {
   let pi_c = [p256(proof.pi_c[0]), p256(proof.pi_c[1])]
   let input = [inputs]
 
-  return { pi_a, pi_b, pi_c, input };
+  return { pi_a, pi_b, pi_c, input }; // Formats the proof data (pi_a, pi_b, pi_c) and input for contract verification
 }
 
 async function generateProof() {
