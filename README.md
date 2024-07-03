@@ -39,7 +39,7 @@ Open any of these according to your choice, then follow these steps:
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU GPLv3 License. See the LICENSE file for details.
 
 ## Authors
 
