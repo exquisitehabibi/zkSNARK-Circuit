@@ -32,7 +32,7 @@ Open any of these according to your choice, then follow these steps:
    - Use the compiled circuit to generate zkSNARK proofs with the inputs A=0 and B=1 which can be found in input.json file under circuits folder.
 
 5. **Deploy Verifier Contract**:
-   - Write a Solidity verifier contract and deploy it to the Amoy or Mumbai Testnet using Hardhat.
+   - Write a Solidity verifier contract (it will be generated automatically after compiling circom file) and deploy it to the Amoy or Mumbai Testnet using Hardhat.
    
 6. **Verify Proofs On-chain**:
    - Interact with the deployed verifier contract by using polygonscan (https://polygonscan.com/).
