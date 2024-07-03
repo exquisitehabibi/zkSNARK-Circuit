@@ -1,3 +1,8 @@
+/* 
+This script defines a Hardhat task named "newcircuit" to generate configuration files and directory structures for new zk-SNARK circuits.
+It creates a new directory for the circuit, initializes necessary files, and updates the circuit configuration JSON file. 
+*/
+
 import { ethers } from "hardhat";
 import { task } from "hardhat/config";
 import { CircomCircuitConfig } from "hardhat-circom";
