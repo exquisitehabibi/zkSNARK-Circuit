@@ -33,6 +33,7 @@ Open any of these according to your choice, then follow these steps:
 
 5. **Deploy Verifier Contract**:
    - Write a Solidity verifier contract (it will be generated automatically after compiling circom file) and deploy it to the Amoy or Mumbai Testnet using Hardhat.
+   - Note: Remember to create the .env file containing all the required URLs, Addresses and Private Keys.
    
 6. **Verify Proofs On-chain**:
    - Interact with the deployed verifier contract by using polygonscan (https://polygonscan.com/).
